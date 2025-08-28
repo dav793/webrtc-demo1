@@ -5,9 +5,13 @@ nodeDataChannel.initLogger('Debug');
 
 const clients = {};
 
+const addr = process.env.SIGNALING_SERVER_ADDR || '127.0.0.1';
+const port = parseInt(process.env.SIGNALING_SERVER_PORT) || 8000;
+console.log(`Starting discovery server on ws://${addr}:${port}`);
+
 const wsServer = new nodeDataChannel.WebSocketServer({
-  bindAddress: process.env.SIGNALING_SERVER_ADDR || '127.0.0.1',
-  port: parseInt(process.env.SIGNALING_SERVER_PORT) || 8000,
+  bindAddress: addr,
+  port: port,
 });
 
 wsServer.onClient((ws) => {

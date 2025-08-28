@@ -12,13 +12,14 @@ const pcMap = {};
 
 // Local ID
 const id = nanoid();
+console.log(`The local ID is: ${id}`);
 
 // Signaling Server
 const WS_URL = `ws://${process.env.SIGNALING_SERVER_ADDR}:${process.env.SIGNALING_SERVER_PORT}` || 'ws://localhost:8000';
+console.log(`Connecting to signaling server @ ${WS_URL}`);
+
 const ws = new nodeDataChannel.WebSocket();
 ws.open(WS_URL + '/' + id);
-
-console.log(`The local ID is: ${id}`);
 console.log(`Waiting for signaling to be connected...`);
 
 ws.onOpen(() => {
