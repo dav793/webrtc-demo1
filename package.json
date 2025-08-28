@@ -6,10 +6,10 @@
   "scripts": {
     "serve:unix": "set -a && . .env && node --enable-source-maps dist/${SCRIPT_PATH}",
     "serve:win": "call .env.bat && node --enable-source-maps dist/%SCRIPT_PATH%",
-    "serve:signal:unix": "SCRIPT_PATH=signaling-server.js&& npm run serve:unix",
-    "serve:signal:win": "set SCRIPT_PATH=signaling-server.js&& npm run serve:win",
-    "serve:peer:unix": "SCRIPT_PATH=peer.js&& npm run serve:unix",
-    "serve:peer:win": "set SCRIPT_PATH=peer.js&& npm run serve:win",
+    "serve:signal:unix": "./run/serve-signal.sh",
+    "serve:signal:win": ".\\run\\serve-signal.bat",
+    "serve:peer:unix": "./run/serve-peer.sh",
+    "serve:peer:win": ".\\run\\serve-peer.bat",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,22 +17,11 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "body-parser": "^2.2.0",
-    "cors": "^2.8.5",
-    "express": "^5.1.0",
     "nanoid": "^5.1.5",
-    "node-datachannel": "^0.29.0",
-    "rxjs": "^7.8.2",
-    "socket.io": "^4.8.1",
-    "websocket": "^1.0.35"
+    "node-datachannel": "^0.29.0"
   },
   "devDependencies": {
-    "@types/cors": "^2.8.19",
-    "@types/express": "^5.0.3",
     "@types/node": "^24.3.0",
-    "@types/websocket": "^1.0.10",
-    "chokidar": "^4.0.3",
-    "concurrently": "^9.2.1",
     "typescript": "^5.9.2"
   }
 }
