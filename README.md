@@ -1,7 +1,7 @@
 
 # WebRTC demo
 
-Tiny, minimal demo showing how to establish direct P2P (Peer-to-peer) connections between clients/private hosts behind NAT, using WebRTC. 
+Tiny, minimal demo showing how to establish direct P2P (Peer-to-peer) connections between clients/private hosts behind NAT, using WebRTC. Tested in Unix and Windows systems running in different regions of the world.
 
 P2P connections between clients/private hosts require NAT traversal techniques that typical connections to public hosts do not.
 Here, public STUN servers from Google are used to facilitate NAT mappings via which traffic can be sent to the private hosts.
@@ -12,7 +12,7 @@ The signaling server allows the clients to discover each other and initiate a di
 
 This demo can run two types of processes; **signaling server** and **peer**. To properly test it, at least 3 total instances must be run remotely from each other. One instance must be a signaling server, and the rest should be peers. Initially, the peers only know the signaling server's public address, but they have no way to reach each other (unless they're in the same network). They use the signaling server to find and connect directly with each other and transfer data.
 
-For both the peers and the signaling server, first you need to create your local .env file by copying the template provided and modifying it:
+For both the peers and the signaling server, first you need to create your local `.env` file by copying the template provided and modifying it:
 ```bash
 cp .env.template .env
 nano .env
@@ -28,10 +28,12 @@ Carriage returns will display as `$` for unix line endings, or `^M$` for windows
 sed -i 's/\r$//' .env
 ```
 
-In unix systems, you will also need to give yourself execution perms for the bash scripts in `run/`:
+In unix systems, you may also need to give yourself execution perms for the bash scripts in `run/`:
 ```bash
 chmod u+x run/*.sh
 ```
+
+## How to run
 
 ### Signaling server
 
@@ -43,13 +45,8 @@ Build:
     ```
 
 Then run:
-* *Unix*:
-    ```bash
-    npm run serve:signal:unix
     ```
-* *Windows*:
-    ```cmd
-    npm run serve:signal:win
+    npm run serve:signal
     ```
 
 ### Peers
@@ -62,13 +59,8 @@ Build:
     ```
 
 Then run:
-* *Unix*:
-    ```bash
-    npm run serve:peer:unix
     ```
-* *Windows*:
-    ```cmd
-    npm run serve:peer:win
+    npm run serve:peer
     ```
 
 ### Further reading
