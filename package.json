@@ -4,12 +4,12 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "serve:unix": "set -a && . .env && node --enable-source-maps dist/${SCRIPT_PATH}",
-    "serve:win": "call .env.bat && node --enable-source-maps dist/%SCRIPT_PATH%",
-    "serve:signal:unix": "./run/serve-signal.sh",
-    "serve:signal:win": ".\\run\\serve-signal.bat",
-    "serve:peer:unix": "./run/serve-peer.sh",
-    "serve:peer:win": ".\\run\\serve-peer.bat",
+    "serve:signal": "set SCRIPT_PATH=signaling-server.js && node ./run/serve.js",
+    "serve:peer": "set SCRIPT_PATH=peer.js && node ./run/serve.js",
+    "serve:signal:unix": "set -a && SCRIPT_PATH=signaling-server.js && ./run/_serve.sh",
+    "serve:signal:win": "set SCRIPT_PATH=signaling-server.js && .\\run\\_serve.bat",
+    "serve:peer:unix": "set -a && SCRIPT_PATH=peer.js && ./run/_serve.sh",
+    "serve:peer:win": "set SCRIPT_PATH=peer.js && .\\run\\_serve.bat",
     "build": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

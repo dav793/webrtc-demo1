@@ -28,6 +28,11 @@ Carriage returns will display as `$` for unix line endings, or `^M$` for windows
 sed -i 's/\r$//' .env
 ```
 
+In unix systems, you will also need to give yourself execution perms for the bash scripts in `run/`:
+```bash
+chmod u+x run/*.sh
+```
+
 ### Signaling server
 
 In `.env`, make sure to use your server's **private** IP address.
