@@ -6,7 +6,7 @@ Tiny, minimal demo showing how to establish direct P2P (Peer-to-peer) connection
 P2P connections between clients/private hosts require NAT traversal techniques that typical connections to public hosts do not.
 Here, public STUN servers from Google are used to facilitate NAT mappings via which traffic can be sent to the private hosts.
 
-The signaling server allows the clients to discover each other and initiate a direct data channel. Afterwards, the clients become peers and are able to transfer data with each other without the signaling server sitting in the middle or knowing about it.
+The signaling server allows the clients to discover each other and initiate a direct data channel. Afterwards, the clients become peers and are able to transfer data with each other without the signaling server or the STUN servers sitting in the middle or knowing about it.
 
 ## Processes
 
