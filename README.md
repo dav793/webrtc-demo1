@@ -65,3 +65,9 @@ Then run:
     ```cmd
     npm run serve:peer:win
     ```
+
+### Further reading
+* [webrtcforthecurious.com](https://webrtcforthecurious.com/docs/01-what-why-and-how/)
+* [node-datachannel](https://github.com/murat-dogan/node-datachannel/tree/d83ba00d80d8e665f4c61c94da19cad8c21a778c)
+* [lib-datachannel (C/C++)](https://github.com/paullouisageneau/libdatachannel/tree/master)
+* [RFC 4787](https://datatracker.ietf.org/doc/html/rfc4787)
