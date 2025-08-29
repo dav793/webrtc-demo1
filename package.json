@@ -18,10 +18,12 @@
   "description": "",
   "dependencies": {
     "nanoid": "^5.1.5",
-    "node-datachannel": "^0.29.0"
+    "werift": "^0.22.2",
+    "ws": "^8.18.3"
   },
   "devDependencies": {
     "@types/node": "^24.3.0",
+    "@types/ws": "^8.18.1",
     "typescript": "^5.9.2"
   }
 }
