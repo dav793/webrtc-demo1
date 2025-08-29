@@ -3,6 +3,8 @@
 
 Tiny, minimal demo showing how to establish direct P2P (Peer-to-peer) connections between clients/private hosts behind NAT, using WebRTC. Tested in Unix and Windows systems running in different regions of the world.
 
+This branch uses [node-datachannel](https://github.com/murat-dogan/node-datachannel#readme), which is a very easy to use implementation of WebRTC that hides away a large part of the WebRTC stack. Unfortunately, it is a native node module which makes it harder to work with bundlers that don't know how to handle native `.node` files (like esbuild) or frameworks like Electron. For an implementation without native node modules, see branch `werift`. 
+
 P2P connections between clients/private hosts require NAT traversal techniques that typical connections to public hosts do not.
 Here, public STUN servers from Google are used to facilitate NAT mappings via which traffic can be sent to the private hosts.
 
