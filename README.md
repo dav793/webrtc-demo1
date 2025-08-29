@@ -3,7 +3,7 @@
 
 Tiny, minimal demo showing how to establish direct P2P (Peer-to-peer) connections between clients/private hosts behind NAT, using WebRTC. Tested in Unix and Windows systems running in different regions of the world.
 
-This branch uses [werift](https://github.com/shinyoshiaki/werift-webrtc), which is a pure Typescript/Javascript implementation of WebRTC with no native dependencies, and should work with bundlers like esbuild and Electron.
+This branch uses [werift](https://github.com/shinyoshiaki/werift-webrtc), which is a pure Typescript/Javascript implementation of WebRTC with no native dependencies, and should work with esbuild and Electron.
 
 P2P connections between clients/private hosts require NAT traversal techniques that typical connections to public hosts do not.
 Here, public STUN servers from Google are used to facilitate NAT mappings via which traffic can be sent to the private hosts.
