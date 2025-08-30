@@ -55,7 +55,7 @@ Then run:
 
 ### Peers
 
-In `.env`, make sure to use your signaling server's **public** IP address.
+In `.env`, make sure to use your signaling server's **public** IP address. If you are only testing inside a local network, use your **private** IP address instead.
 
 Build:
     ```
