@@ -10,6 +10,8 @@ Here, public STUN servers from Google are used to facilitate NAT mappings via wh
 
 The signaling server allows the clients to discover each other and initiate a direct data channel. Afterwards, the clients become peers and are able to transfer data with each other without the signaling server or the STUN servers sitting in the middle or knowing about it.
 
+Though the STUN servers are often sufficient, sometimes they still can't find a valid NAT mapping between two peers. Free-to-use TURN servers are used here to relay all communication between peers when the STUN servers fail.
+
 This demo can run two types of processes; **signaling server** and **peer**. To properly test it, at least 3 total instances must be run remotely from each other. One instance must be a signaling server, and the rest should be peers. Initially, the peers only know the signaling server's public address, but they have no way to reach each other (unless they're in the same network). They use the signaling server to find and connect directly with each other and transfer data.
 
 ## How to run
